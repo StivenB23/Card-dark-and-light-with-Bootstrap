@@ -1,0 +1,38 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva;
+}
+.card{
+    padding:20px;
+    width:18rem;
+}
+.checkbox{
+    width:300px;
+    margin:100px auto;
+}
+#logo{
+    width:150px;
+}
+
+/* mode dark */
+
+.darkmode{
+    background-color:#292929;
+    color:white;
+
+}
+
+.darkmode .card{
+    background-color:#3d3d3d;
+}
+
+.form-check{
+    cursor:pointer;
+    margin-top:30px;
+    margin-left:30px;
+}
+
+#checkbox {
+    width:50px;
+    height:20px;
+    cursor:pointer;
+}

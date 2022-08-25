@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center mt-3">
+      <div class="card shadow-sm w-1">
+        <div class="form-check form-switch">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            role="switch"
+            id="checkbox"
+            onclick="setDarkMode()"
+          />
+          <label class="form-check-label" for="checkbox">Dark Mode</label>
+        </div>
+        <div class="text-center">
+          <img
+            src="assests/logo_nexir.jpg"
+            alt=""
+            class="rounded-circle mb-4"
+            id="logo"
+          />
+          <h1 class="mt-3">NEXIR</h1>
+          <hr />
+        </div>
+        <div class="card-body">
+          <p class="text-card">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a
+            venenatis sapien, ut fringilla quam. Cras non volutpat nibh, a
+            mollis nibh. Sed scelerisque tellus non magna maximus volutpat. 
+        </div>
+      </div>
+    </div>
+    <script>
+      if (localStorage.getItem("theme") == "dark") {
+        setDarkMode();
+        if (document.getElementById("checkbox").checked) {
+          localStorage.setItem("checkbox", true);
+        }
+      }
+      function setDarkMode() {
+        console.log("kh");
+        let isDark = document.body.classList.toggle("darkmode");
+        if (isDark) {
+          setDarkMode.checked = true;
+          localStorage.setItem("theme", "dark");
+          document
+            .getElementById("checkbox")
+            .setAttribute("checked", "checked");
+        } else {
+          setDarkMode.checked = true;
+          localStorage.removeItem("theme", "dark");
+        }
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
